@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Bebidas</h1>
     <div>
-      <button class= "adicionar">Adicionar</button>
+      <button class= "adicionar" @click="show">Adicionar</button>
     </div>
     <br>
     <div class="item-produto">
@@ -13,13 +13,33 @@
       </div>
       <button class="excluir">Excluir</button>
     </div>
+    <modal name="adicionar" :clickToClose="false">
+      <div>
+        <img>
+        <span class='nome'>Imagem do Produto</span>
+        <input class='text-area' type="file" />
+        <span class='nome'>Nome do Produto</span>
+        <input class='text-area' name='nome produto'>
+        <span class='nome'>Preço</span>
+        <input class='text-area' name='nome produto'>
+        <button class= "adicionar" @click="hide">Cancelar</button>
+      </div>
+    </modal>
   </div>
 </template>
 
 <script>
 export default {
-
-}
+  name: "App",
+  methods: {
+    show() {
+      this.$modal.show("adicionar");
+    },
+    hide() {
+      this.$modal.hide("adicionar");
+    }
+  }
+};
 </script>
 
 <style>
@@ -88,7 +108,7 @@ export default {
     margin: 4px;
     cursor: pointer;
     border-radius: 8px;
-    transition-duration: 0.4s
+    transition: 0.4s
 }
 
 .adicionar:hover{
@@ -100,5 +120,18 @@ export default {
   background: red;
   color: #000000;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.nome {
+  display: block;
+  padding-left: 20px;
+  margin-top: 15px
+}
+.text-area{
+  display: block;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+  height: 30px
 }
 </style>

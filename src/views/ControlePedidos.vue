@@ -4,14 +4,14 @@
     <br/>
     <section>
       <div class="section-status">Entrada<div class="section-divider"></div></div>
-        <table>
+        <table class="table">
           <tr>
             <th>Número</th>
-            <th>Itens</th>
-            <th>Observação</th>
-            <th>Valor</th>
-            <th>Cliente</th>
-            <th>Ação</th>
+            <th class="item-table">Itens</th>
+            <th class="item-table">Observação</th>
+            <th class="item-table">Valor</th>
+            <th class="item-table">Cliente</th>
+            <th class="item-table">Ação</th>
           </tr>
           <tr v-for="entrada in pedidos.entradas" v-bind:key="entrada.id">
             <td>{{ entrada.id }}</td>
@@ -220,6 +220,7 @@ export default {
     display: flex;
     align-items: center;
     margin: 1em 0;
+    font-size: 1.2em;
   }
 
   .section-divider {
@@ -238,7 +239,6 @@ export default {
   }
   table {
     width: 100%;
-    border-collapse: collapse;
   }
 
   table, tr, th, td {
@@ -260,4 +260,24 @@ export default {
   button {
     margin: 0.5em;
   }
+
+  .table{
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    border-radius: 8px;
+  }
+
+  .table:hover{
+    background-color: #FFE7E2;
+    transition: 0.3s;
+  }
+
+  th{
+    border: none;
+  }
+
+  .item-table{
+    border-left: solid, black, 2px !important;
+  }
+
+ 
 </style>
