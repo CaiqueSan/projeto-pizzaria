@@ -38,6 +38,11 @@ li {
   margin: 1em;
 }
 
+li:hover{
+  color: black;
+  font-weight:500;
+}
+
 a {
   color: white;
   text-decoration: none;
