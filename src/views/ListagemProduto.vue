@@ -15,6 +15,8 @@
       <button class="excluir" @click="show1">Alterar</button>
       <button class="excluir">Excluir</button>
     </div>
+
+
     <modal name="adicionar" :clickToClose="false" :height="auto" :minHeight="490" :adaptive="true" :scrollable="true" :focusTrap="true" >
       <div>
         <h2 style="margin: 15px">Adicionar Pizza</h2>
@@ -36,6 +38,8 @@
         <button class= "adicionar" @click="hide" style= "position:relative; left: 430px; top: 30px;">Cancelar</button>
       </div>
     </modal>
+
+
     <modal name="alterar" :clickToClose="false" :height="auto" :minHeight="490" :adaptive="true" :scrollable="true" :focusTrap="true" >
       <div>
         <h2 style="margin: 15px">Editar Pizza</h2>
@@ -57,6 +61,8 @@
         <button class= "adicionar" @click="hide1" style= "position:relative; left: 430px; top: 30px;">Cancelar</button>
       </div>
     </modal>
+
+    
   </div>
 </template>
 
