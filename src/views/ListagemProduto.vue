@@ -13,16 +13,18 @@
       </div>
       <button class="excluir">Excluir</button>
     </div>
-    <modal name="adicionar" :clickToClose="false">
+    <modal name="adicionar" :clickToClose="false" :height="340">
       <div>
-        <img>
         <span class='nome'>Imagem do Produto</span>
-        <input class='text-area' type="file" />
+        <label for="arquivo">
+          <img class="up-img" src="../assets/up-image.png" width="80px">
+        </label>
+        <input type="file" name="arquivo" id="arquivo">
         <span class='nome'>Nome do Produto</span>
         <input class='text-area' name='nome produto'>
         <span class='nome'>Preço</span>
         <input class='text-area' name='nome produto'>
-        <button class= "adicionar" @click="hide">Cancelar</button>
+        <button class= "adicionar" @click="hide" style= "position:relative; left: 490px; top: 30px;">Cancelar</button>
       </div>
     </modal>
   </div>
@@ -44,7 +46,7 @@ export default {
 
 <style>
   .container {
-    width: 1000px;
+    width: 60%;
     margin: 1em auto;
     display: flex;
     flex-flow: column wrap;
@@ -125,13 +127,30 @@ export default {
 .nome {
   display: block;
   padding-left: 20px;
-  margin-top: 15px
+  margin-top: 15px;
+  font-size: 1.2em;
 }
+
 .text-area{
   display: block;
   padding-left: 20px;
   margin-left: 20px;
   border-radius: 8px;
   height: 30px
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.up-img{
+  background-repeat: no-repeat;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.up-img:hover{
+  filter:brightness(90%);
 }
 </style>
