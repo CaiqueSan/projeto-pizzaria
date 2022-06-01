@@ -3,8 +3,8 @@
     <router-link to="/"><h1>Pizzaria</h1></router-link>
     <ul class="nav-menu">
       <router-link to="/"><li>Controle de pedidos</li></router-link>
-      <router-link to="/listagem"><li>Pizzas</li></router-link>
-      <router-link to="/"><li>Bebidas</li></router-link>
+      <router-link to="/pizzas"><li>Pizzas</li></router-link>
+      <router-link to="/bebidas"><li>Bebidas</li></router-link>
     </ul>
   </nav>  
 </template>

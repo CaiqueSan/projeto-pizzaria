@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import ControlePedidos from '@/views/ControlePedidos'
-import ListagemProduto from '@/views/ListagemProduto'
+import ListagemPizza from '@/views/ListagemPizza'
+import ListagemBebida from '@/views/ListagemBebida'
 
 Vue.use(VueRouter)
 
@@ -13,9 +14,14 @@ const routes = [
     component: ControlePedidos
   },
   {
-    path: '/listagem',
-    name: 'listagem-produto',
-    component: ListagemProduto
+    path: '/pizzas',
+    name: 'listagem-pizzas',
+    component: ListagemPizza
+  },
+  {
+    path: '/bebidas',
+    name: 'listagem-bebidas',
+    component: ListagemBebida
   }
 ]
 
